@@ -1,0 +1,244 @@
+# ApexAI - Week 1 Daily Task Plan (July 4–10)
+
+## 📅 Day 1 – Setup Sunday
+### 🔧 6:30 PM – 10:30 PM (Project Block)
+- [ ] Create GitHub repo and initialize with README.md
+- [ ] Set up folder structure: data_pipeline/, modeling/, llm/, dashboard/, utils/
+- [ ] Create and activate Python 3.10 virtual environment
+- [ ] Install initial packages: fastf1, pandas, matplotlib, plotly, streamlit
+- [ ] Create requirements.txt file
+- [ ] Set up Notion / Kanban board for tracking (use tasks.txt structure)
+
+---
+
+## 📅 Day 2 – Data Pull Day
+### 🔧 6:30 PM – 10:30 PM (Project Block)
+- [ ] Write fastf1_client.py to pull lap times and telemetry for 1 past race
+- [ ] Write ergast_client.py to pull race results and driver info
+- [ ] Store all pulled raw data in /data/raw/
+- [ ] Validate data with quick CSV or JSON output for one Grand Prix
+
+---
+
+## 📅 Day 3 – Data Processing
+### 🔧 6:30 PM – 10:30 PM (Project Block)
+- [ ] Create data_processor.py to clean lap/pit/driver data
+- [ ] Merge FastF1 and Ergast data cleanly into race format
+- [ ] Create feature_engineering.py to compute:
+      - stint_duration, avg_lap_pace, compound, tire_decay_signal
+- [ ] Save processed data in /data/processed/
+
+---
+
+## 📅 Day 4 – Visualization Sprint 1
+### 🔧 6:30 PM – 10:30 PM (Project Block)
+- [ ] Plot lap_time vs lap_number for 3 drivers using matplotlib or plotly
+- [ ] Create tire compound vs stint performance chart
+- [ ] Add all plotting code to utils/visualization.py
+- [ ] Save sample visuals in visuals/
+
+---
+
+## 📅 Day 5 – Cleanup + DSA Catchup
+### 🌀 6:00 PM – 6:30 PM (Reset Block)
+- [ ] Review and clean file structure
+- [ ] Create a Notion bug/task backlog from previous 4 days
+
+### 🔧 6:30 PM – 9:00 PM (Project Block)
+- [ ] Refactor data pipeline into modular, clean reusable functions
+
+### 💻 9:00 PM – 10:30 PM (Extra Block)
+- [ ] DSA catch-up or study: time-series forecasting (LightGBM or LSTM basics)
+
+---
+
+## 📅 Day 6 – Tire Model Begins
+### 🔧 6:30 PM – 10:30 PM (Project Block)
+- [ ] Build tire_model.py
+  - Input: stint_duration, compound, laps
+  - Output: predicted degradation curve (regression or LightGBM)
+- [ ] Plot actual vs predicted lap time decay
+- [ ] Save model + visual to /modeling/
+
+---
+
+## 📅 Day 7 – Race Simulation Kickoff
+### 🔧 6:30 PM – 10:30 PM (Project Block)
+- [ ] Start writing race_simulator.py
+- [ ] Simulate a basic race for 3 drivers and 3 compounds
+- [ ] Add simple pit stop logic based on degradation
+- [ ] Print simulated race results (position + total time)
+
+---
+
+# End of Week 1 Deliverables
+- [ ] GitHub repo with working FastF1 and Ergast data pipeline
+- [ ] Processed stint and lap data with engineered features
+- [ ] Tire decay model predicting degradation over laps
+- [ ] Early race simulation logic in place
+- [ ] First round of visuals and organized repo
+
+# 🏁 ApexAI – Full Project Plan (tasks.txt)
+# Follows your daily routine: 6:30 PM – 10:30 PM = Project Work Block
+
+====================================================
+🌱 WEEK 1: SETUP + DATA PIPELINE KICKOFF (July 4–10)
+====================================================
+
+## Day 1 – Setup Sunday
+- [ ] Create GitHub repo and push base folders (data_pipeline/, modeling/, etc.)
+- [ ] Add README.md with vision and project roadmap
+- [ ] Set up Python 3.10 virtualenv and install FastF1, pandas, matplotlib, plotly
+- [ ] Create requirements.txt
+- [ ] Set up Notion or Trello to track progress
+
+## Day 2 – FastF1 + Ergast Clients
+- [ ] Write fastf1_client.py to pull lap times and telemetry
+- [ ] Write ergast_client.py for race and driver info
+- [ ] Store data in /data/raw
+
+## Day 3 – Clean & Process Data
+- [ ] Create data_processor.py to clean lap and stint data
+- [ ] Create feature_engineering.py (stint duration, pace delta, compound)
+
+## Day 4 – First Visualizations
+- [ ] Plot lap_time vs lap_number
+- [ ] Plot tire compound vs stint performance
+- [ ] Save code in utils/visualization.py
+
+## Day 5 – Cleanup + Bug Log
+- [ ] Refactor pipeline code
+- [ ] Create project backlog in Notion
+
+## Day 6 – Start Tire Model
+- [ ] Write tire_model.py (regression/LightGBM for degradation)
+
+## Day 7 – Sim Engine Begins
+- [ ] Build race_simulator.py (3 drivers + pit logic)
+
+====================================================
+🏎️ WEEK 2: STRATEGY ENGINE EXPANSION (July 11–17)
+====================================================
+
+## Day 8 – Race Simulator Expansion
+- [ ] Add weather inputs and compound degradation handling
+- [ ] Simulate undercut/overcut logic
+
+## Day 9 – Strategy Optimizer
+- [ ] Create strategy_optimizer.py
+- [ ] Input: stint data → Output: optimal pit windows
+
+## Day 10 – What-If Scenario Testing
+- [ ] Simulate early vs late pit stop
+- [ ] Compare delta in total race time
+
+## Day 11 – Integrate Tire Model + Strategy
+- [ ] Use model output to simulate pit timing
+- [ ] Create strategy score metric
+
+## Day 12 – Position Predictor
+- [ ] Write position_predictor.py to forecast finishing positions
+
+## Day 13 – Unit Tests + Logs
+- [ ] Add logging and test all modeling components
+
+## Day 14 – Showcase Run
+- [ ] Simulate Monaco 2023, print race summary with predictions
+
+====================================================
+🧠 WEEK 3: PIT-SYNTH + LLM INTEGRATION (July 18–24)
+====================================================
+
+## Day 15 – Build Knowledge Base
+- [ ] Create knowledge_base.py
+- [ ] Chunk F1 strategy docs, race analysis, and commentary
+
+## Day 16 – Vector Database
+- [ ] Store vectors using FAISS or ChromaDB
+
+## Day 17 – GPT-4 API Setup
+- [ ] Set up `pit_synth.py`
+- [ ] Connect OpenAI API or use local LLaMA3
+
+## Day 18 – Prompt Engineering
+- [ ] Write prompts for race Q&A, strategy explanations
+
+## Day 19 – Retrieval-Augmented Generation (RAG)
+- [ ] Integrate vector DB into `rag_system.py`
+- [ ] Test RAG + LLM output quality
+
+## Day 20 – Natural Language Q&A Interface
+- [ ] Allow queries like:
+      "Why did Verstappen pit early?" → response from LLM
+
+## Day 21 – PitSynth Evaluation
+- [ ] Run sample races and ask 5–10 questions
+- [ ] Evaluate accuracy, hallucination rate
+
+====================================================
+📊 WEEK 4: DASHBOARD & UI (July 25–31)
+====================================================
+
+## Day 22 – Streamlit Setup
+- [ ] Create dashboard/app.py base
+- [ ] Add basic layout and nav sidebar
+
+## Day 23 – Race Timeline Visual
+- [ ] race_timeline.py → Plot position vs lap
+- [ ] Add pit stops as markers
+
+## Day 24 – Strategy View
+- [ ] strategy_view.py → Show compound usage, stint graph
+
+## Day 25 – Commentary Feed
+- [ ] commentary_feed.py → Show PitSynth messages
+
+## Day 26 – Connect Model Outputs
+- [ ] Pass AutoPodium outputs to dashboard
+- [ ] Render race predictions + Q&A answers
+
+## Day 27 – User Interaction
+- [ ] Add input box for race questions (Streamlit text_input)
+
+## Day 28 – Dashboard Polish
+- [ ] Tweak layout, spacing, fonts, color palette
+
+====================================================
+🔁 WEEK 5: TESTING, OPTIMIZATION, DEPLOYMENT (Aug 1–7)
+====================================================
+
+## Day 29 – Live Race Testing
+- [ ] Run ApexAI during live race or replay
+- [ ] Compare predictions vs actual events
+
+## Day 30 – Performance Optimization
+- [ ] Tune tire model + simulator speed
+- [ ] Cache key calls
+
+## Day 31 – Prompt Tuning
+- [ ] Improve context handling and formatting in LLM answers
+
+## Day 32 – UI Polish + Help
+- [ ] Add "how to use" guide in dashboard
+
+## Day 33 – Bug Fix Day
+- [ ] Fix 3–5 reported issues from logs/tests
+
+## Day 34 – Create Demo
+- [ ] Record 2-min demo walkthrough (optional)
+
+## Day 35 – Wrap Up + Reflect
+- [ ] Clean up repo
+- [ ] Final README polish
+- [ ] Journal: What I learned, how I’d improve
+
+====================================================
+⭐ BONUS TASKS (STRETCH GOALS)
+====================================================
+
+- [ ] Add weather API support
+- [ ] Model Safety Car probability
+- [ ] Use RLlib or StableBaselines for agent-based strategy
+- [ ] Push to Streamlit Cloud or HuggingFace Spaces
+- [ ] Create blog post or Twitter thread about project
+

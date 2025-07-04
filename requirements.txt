@@ -1,0 +1,55 @@
+# Core Data Science & ML
+pandas
+numpy
+scipy
+scikit-learn
+lightgbm
+xgboost
+
+# Time Series & Deep Learning
+tensorflow
+keras
+torch
+statsmodels
+
+# F1 Data Sources
+fastf1
+requests
+
+# LLM & RAG
+openai
+langchain
+langchain-openai
+chromadb
+faiss-cpu
+sentence-transformers
+
+# Dashboard & Visualization
+streamlit
+plotly
+matplotlib
+seaborn
+
+# API & Web
+fastapi
+uvicorn
+httpx
+# Database & Storage
+
+sqlalchemy
+redis
+
+# Utilities
+python-dotenv
+pydantic
+tqdm
+loguru
+python-dateutil
+
+# Development & Testing
+pytest
+black
+flake8
+mypy
+jupyter
+ipykernel
