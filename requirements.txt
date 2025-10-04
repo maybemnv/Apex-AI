@@ -3,8 +3,6 @@ pandas
 numpy
 scipy
 scikit-learn
-lightgbm
-xgboost
 
 # Time Series & Deep Learning
 tensorflow
@@ -20,7 +18,6 @@ requests
 openai
 langchain
 langchain-openai
-chromadb
 faiss-cpu
 sentence-transformers
 
